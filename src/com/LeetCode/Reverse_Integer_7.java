@@ -1,3 +1,4 @@
+package com.LeetCode;
 
 public class Reverse_Integer_7 {
 	public static int reverse_mine(int x) {
@@ -13,7 +14,8 @@ public class Reverse_Integer_7 {
 		return Integer.parseInt(out_x);
 	}
 
-	public int reverse_good(int x) {
+	
+	public static int reverse_good(int x) {
 		long answer = 0;
 		while (x != 0) {
 			answer = 10 * answer + x % 10;
@@ -27,8 +29,9 @@ public class Reverse_Integer_7 {
 //		int output = reverse_mine(321);
 //		System.out.println(output);
 		
-		int output_good = reverse_mine(-32167);
+		int output_good = reverse_good(-4321);
 		System.out.println(output_good);
+		
 	}
 
 }
