@@ -1,19 +1,16 @@
 package com.LeetCode;
 
-import sun.security.util.Length;
 
 public class Remove_Element_27 {
 
-	public static int removeElement(int[] nums, int val) {
-		int i = 0;
-		for (int j = 0; i < nums.length; j++) {
-			if (nums[j] != val) {
-				nums[i] = nums[j];
+	public static int removeElement(int[] A, int val) {
+		int len=A.length;
+		for(int i=0;i<len;i++){
+			while (A[i]==val&&i<len){
+				A[i]=A[--len];
 			}
-			
 		}
-
-		return i;
+		return len;
 	}
 
 	// The basic idea is when elem is found at index i,
@@ -48,7 +45,7 @@ public class Remove_Element_27 {
 
 	public static void main(String args[]) {
 		int a[] = { 3, 2, 2, 5, 3, 4 };
-		int b = removeElement(a, 3);
+		int b = removeElement_good(a, 3);
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i]);
 		}

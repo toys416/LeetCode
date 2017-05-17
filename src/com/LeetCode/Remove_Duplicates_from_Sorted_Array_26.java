@@ -1,16 +1,15 @@
 package com.LeetCode;
 
 public class Remove_Duplicates_from_Sorted_Array_26 {
-	public static int removeDuplicates(int[] nums) {
+	public static int removeDuplicates(int[] num) {
 		int i=0;
-		for (int j=1;j<nums.length;j++){
-			if(nums[j]!=nums[j+1]){
-				nums[i]=nums[j];
+		for (int j=1;i<num.length;j++){
+			if(num[j]!=num[i]){
 				i++;
+				num[i]=num[j];
 			}
-			
 		}
-		return i;
+		return i+1;
 
 	}
 	
